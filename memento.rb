@@ -5,21 +5,21 @@
 class Memento < Formula
   desc "A markdown-based, in-repo memory substrate for AI coding agents."
   homepage "https://github.com/tpisel/memento"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tpisel/memento/releases/download/v0.1.0/memento_darwin_amd64.tar.gz"
-      sha256 "e6705865c4478fe769e620a5a91feae6e33d909b47657e3342672d27008a526b"
+      url "https://github.com/tpisel/memento/releases/download/v0.2.0/memento_darwin_amd64.tar.gz"
+      sha256 "82587ad05e6b0f170e2cdd97ba8d1aa7efdf12bd415b9f3d1ce162d638d48dc4"
 
       define_method(:install) do
         bin.install "memento"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tpisel/memento/releases/download/v0.1.0/memento_darwin_arm64.tar.gz"
-      sha256 "e0f0b3681c27ec6eaf82c9a7e9227ad64da3f7454bd64527f9a1fb9c75c231b9"
+      url "https://github.com/tpisel/memento/releases/download/v0.2.0/memento_darwin_arm64.tar.gz"
+      sha256 "e859d771cb7bafe854c7b9ad7b1694ed8462c3d6f681de48196b73ac0dca8acd"
 
       define_method(:install) do
         bin.install "memento"
@@ -29,15 +29,15 @@ class Memento < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tpisel/memento/releases/download/v0.1.0/memento_linux_amd64.tar.gz"
-      sha256 "4aa9159c176fbcee062be6e49c98e6e22deaa3b23dffb629479dbe12c5bfde7e"
+      url "https://github.com/tpisel/memento/releases/download/v0.2.0/memento_linux_amd64.tar.gz"
+      sha256 "ca87be16fcee748ee9dc3493874c411a3fa75ae52de5943e386498aebef73956"
       define_method(:install) do
         bin.install "memento"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tpisel/memento/releases/download/v0.1.0/memento_linux_arm64.tar.gz"
-      sha256 "c4ecaddd26861dc8d835e5303e7375d0b57b04fb1ea70682a31807e566265427"
+      url "https://github.com/tpisel/memento/releases/download/v0.2.0/memento_linux_arm64.tar.gz"
+      sha256 "0d0bb4baec2c7c195ee5a23da5c19a9f87af79301e26670e694fc13284b245b1"
       define_method(:install) do
         bin.install "memento"
       end
